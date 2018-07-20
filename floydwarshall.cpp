@@ -17,7 +17,7 @@ void floydWarshall (int graph[][V])
         {
             for (j = 0; j < V; j++)
             {
-                if (dist[i][k] + dist[k][j] < dist[i][j])
+                if (dist[i][k] > dist[k][j] + dist[i][j])
                     dist[i][j] = dist[i][k] + dist[k][j];
             }
         }
